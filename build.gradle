@@ -109,11 +109,10 @@ dependencies {
     compile "curse.maven:the-twilight-forest-227639:2561393"
     compile "curse.maven:gregtech-ce-unofficial-557242:5121638-sources-5121640"
     compile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.23-16"
-    compile "mezz.jei:jei_1.12.2:4.13.1.220:api"
+    compile "mezz.jei:jei_1.12.2:4.16.1.301:api"
     compile "curse.maven:mcp.mobius.waila-253449:2568751"
     compile "com.github.glitchfiend.biomesoplenty:BiomesOPlenty:1.12.2-7.0.1.2425:universal"
     compile "com.progwml6.natura:natura:1.12.2-4.3.2.68"
-    runtime "mezz.jei:jei_1.12.2:4.13.1.220"
     runtime "curse.maven:mantle-74924:2713386"
     runtime "curse.maven:code-chicken-lib-242818:2779848"
 }
