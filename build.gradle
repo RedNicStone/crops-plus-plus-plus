@@ -42,7 +42,7 @@ minecraft {
     mappings = "stable_39"
 }
 archivesBaseName = config.modname+"["+minecraft.version+"]"+project.version
-task devJar(type: Jar) {
+tasks.register('devJar', Jar) {
     from sourceSets.main.output
     classifier = 'dev'
 }
@@ -55,39 +55,45 @@ repositories {
     maven {
         url "https://maven.tterrag.com/"
     }
+    /*maven {
+        name = "ic2"
+        url = "http://maven.ic2.player.to/"
+    }*/
 	//Natura 
     maven {
         url "http://dvs1.progwml6.com/files/maven/"
     }
     maven {
-        url "http://tehnut.info/maven"
+        url "https://cursemaven.com"
     }
-	maven {
-		url "http://maven.ic2.player.to"
-	}
 	//BoP
+    /*
 	maven {
 		url "http://files.minecraftforge.net/maven/"
 	}
+	*/
 	ivy {
         url "https://google.com/404"
         ivyPattern("https://google.com/404") // Workaround for https://github.com/gradle/gradle/issues/4107
         artifactPattern("https://media.forgecdn.net/files/[organisation]/[module]/[revision].[ext]")
 	}
-	
+    maven {
+        url = "https://modmaven.dev/"
+    }
 }
 
 //http://files.minecraftforge.net/maven/com/github/glitchfiend/biomesoplenty/BiomesOPlenty/1.12.2-7.0.1.2425/BiomesOPlenty-1.12.2-7.0.1.2425-universal.jar
 dependencies {
+    compile "curse.maven:net.industrialcraft-242638:3838713-api-3838715"
+    compile "curse.maven:the-twilight-forest-227639:2561393"
+    compile "curse.maven:gregtech-ce-unofficial-557242:5121638-sources-5121640"
     deobfCompile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.23-16"
     deobfCompile "mezz.jei:jei_1.12.2:4.13.1.220:api"
-    deobfCompile "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2"
-	deobfCompile "net.industrial-craft:industrialcraft-2:2.8.99-ex112:dev"
+    deobfCompile "curse.maven:mcp.mobius.waila-253449:2568751"
 	deobfCompile "com.github.glitchfiend.biomesoplenty:BiomesOPlenty:1.12.2-7.0.1.2425:universal"
 	deobfCompile "com.progwml6.natura:natura:1.12.2-4.3.2.68"
-	deobfCompile "2561:393:twilightforest-1.12.2-3.7.424-universal@jar"
-    runtime "mezz.jei:jei_1.12.2:4.13.1.220:dev"
-
+    runtime "mezz.jei:jei_1.12.2:4.13.1.220"
+    runtime "curse.maven:mantle-74924:2713386"
 }
 
 processResources {
