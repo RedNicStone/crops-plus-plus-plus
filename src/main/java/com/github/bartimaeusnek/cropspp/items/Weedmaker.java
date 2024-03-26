@@ -14,7 +14,7 @@ public class Weedmaker extends Item {
 
     public Weedmaker() {
         super();
-        this.setTranslationKey("Weedmaker");
+        this.setUnlocalizedName("Weedmaker");
         this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTab.cpp);
         this.setMaxDamage(0);

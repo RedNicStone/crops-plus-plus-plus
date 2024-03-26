@@ -24,7 +24,7 @@ public class ItemBppLens extends Item {
         super();
         this.setMaxDamage(0);
         this.setCreativeTab(CreativeTab.cpp);
-        this.setTranslationKey("cppLens");
+        this.setUnlocalizedName("cppLens");
         this.setMaxStackSize(1);
         //this.setTextureName("bpp:itemLens");
     }

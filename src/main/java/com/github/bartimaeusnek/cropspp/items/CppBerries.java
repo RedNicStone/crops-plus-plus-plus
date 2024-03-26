@@ -36,7 +36,7 @@ public class CppBerries extends ItemFood {
     }
 
     @Override
-    public String getTranslationKey(ItemStack itemstack) {
+    public String getUnlocalizedName(ItemStack itemstack) {
         return (new StringBuilder()).append("item.berry.").append(textureNames[itemstack.getItemDamage()]).toString();
     }
 

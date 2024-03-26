@@ -42,7 +42,7 @@ public class ItemBppSpade extends ItemTool {
 
     public ItemBppSpade() {
         super(1.0F,1f, Item.ToolMaterial.IRON, BlocksAffected);
-        this.setTranslationKey("Spade");
+        this.setUnlocalizedName("Spade");
         //this.setTextureName("bpp:itemSpade");
         this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTab.cpp);

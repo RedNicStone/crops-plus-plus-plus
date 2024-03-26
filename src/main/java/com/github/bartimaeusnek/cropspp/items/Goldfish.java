@@ -19,7 +19,7 @@ public class Goldfish extends ItemFood {
     public Goldfish() {
         super(1, 2, false);
         this.setCreativeTab(CreativeTab.cpp);
-        this.setTranslationKey("foodGoldfish");
+        this.setUnlocalizedName("foodGoldfish");
 //        this.setTextureName("bpp:foodGoldfish");
     }
 

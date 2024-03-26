@@ -67,7 +67,7 @@ public class CropLoadCore {
         for (Block b : ForgeRegistries.BLOCKS.getValuesCollection()){
             try {
                 if (b.canSustainPlant((IBlockState) b.getBlockState().getBaseState(), (IBlockAccess) FMLCommonHandler.instance().getMinecraftServerInstance().worlds[0], BlockPos.ORIGIN, EnumFacing.UP, new BlockCarrot()))
-                    EnumHelper.addEnum(CropSoilType.class, b.getTranslationKey(), new Class[]{Block.class}, b);
+                    EnumHelper.addEnum(CropSoilType.class, b.getUnlocalizedName(), new Class[]{Block.class}, b);
             }catch (Exception e){}
         }
     }

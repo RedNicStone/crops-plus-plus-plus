@@ -12,7 +12,7 @@ public final class CreativeTab extends CreativeTabs {
     }
 
     @Override
-    public ItemStack createIcon() {
+    public ItemStack getTabIconItem() {
        /* if (ModsLoaded.Natura)
             return OreDict.ISget("cropSaguaroBerry");
         else */return new ItemStack(CppItems.Goldfisch);
