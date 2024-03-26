@@ -1,13 +1,16 @@
 buildscript {
     repositories {
-        jcenter()
-        maven { url = "https://files.minecraftforge.net/maven" }
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "https://maven.minecraftforge.net"
+        }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
     }
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'idea'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
@@ -35,22 +38,38 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12.2-14.23.5.2808"
-	replaceIn "Cropspp.java"
-    replace "@version@", project.version
-    runDir = "eclipse"
-    mappings = "stable_39"
+    mappings channel: 'snapshot', version: '20171003-1.12'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+        }
+
+        server {
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
 }
-archivesBaseName = config.modname+"["+minecraft.version+"]"+project.version
+
+def forge_version = '1.12.2-14.23.5.2860'
+
+archivesBaseName = config.modname+"["+forge_version+"]"+project.version
 tasks.register('devJar', Jar) {
     from sourceSets.main.output
     classifier = 'dev'
 }
 
-artifacts {
-    archives devJar
-    archives sourceJar
-}
 repositories {
     maven {
         url "https://maven.tterrag.com/"
@@ -84,29 +103,32 @@ repositories {
 
 //http://files.minecraftforge.net/maven/com/github/glitchfiend/biomesoplenty/BiomesOPlenty/1.12.2-7.0.1.2425/BiomesOPlenty-1.12.2-7.0.1.2425-universal.jar
 dependencies {
+    minecraft 'net.minecraftforge:forge:' + forge_version
+
     compile "curse.maven:net.industrialcraft-242638:3838713-api-3838715"
     compile "curse.maven:the-twilight-forest-227639:2561393"
     compile "curse.maven:gregtech-ce-unofficial-557242:5121638-sources-5121640"
-    deobfCompile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.23-16"
-    deobfCompile "mezz.jei:jei_1.12.2:4.13.1.220:api"
-    deobfCompile "curse.maven:mcp.mobius.waila-253449:2568751"
-	deobfCompile "com.github.glitchfiend.biomesoplenty:BiomesOPlenty:1.12.2-7.0.1.2425:universal"
-	deobfCompile "com.progwml6.natura:natura:1.12.2-4.3.2.68"
+    compile "mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.23-16"
+    compile "mezz.jei:jei_1.12.2:4.13.1.220:api"
+    compile "curse.maven:mcp.mobius.waila-253449:2568751"
+    compile "com.github.glitchfiend.biomesoplenty:BiomesOPlenty:1.12.2-7.0.1.2425:universal"
+    compile "com.progwml6.natura:natura:1.12.2-4.3.2.68"
     runtime "mezz.jei:jei_1.12.2:4.13.1.220"
     runtime "curse.maven:mantle-74924:2713386"
+    runtime "curse.maven:code-chicken-lib-242818:2779848"
 }
 
 processResources {
     // this will ensure that this task is redone when the versions change.
     inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
+    inputs.property "mcversion", forge_version
 
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
                 
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        expand 'version':project.version, 'mcversion':forge_version
     }
         
     // copy everything else except the mcmod.info
