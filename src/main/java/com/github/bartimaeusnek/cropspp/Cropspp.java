@@ -3,6 +3,7 @@ package com.github.bartimaeusnek.cropspp;
 import com.github.bartimaeusnek.cropspp.commands.EnableDebug;
 import com.github.bartimaeusnek.cropspp.croploader.CropLoader;
 import com.github.bartimaeusnek.cropspp.items.CppItems;
+import com.github.bartimaeusnek.cropspp.GTHandler.machines.CropMetaTileEntities;
 import ic2.api.crops.CropCard;
 import ic2.api.crops.Crops;
 import ic2.core.crop.IC2Crops;
@@ -98,6 +99,7 @@ public final class Cropspp {
 //        }
         CppItems.OreDictItems();
         CppItems.register_recipes();
+        CropMetaTileEntities.init();
     }
 
     @EventHandler
