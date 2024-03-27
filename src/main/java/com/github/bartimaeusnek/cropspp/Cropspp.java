@@ -65,12 +65,9 @@ public final class Cropspp {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent postinit) {
-
-
-//        if (ModsLoaded.GT) {
-//            final GTHandler GTHandler = new GTHandler();
-//            GTHandler.run();
-//        }
+        if (ModsLoaded.GT) {
+            CropMachineCraftingRecipes.register();
+        }
     }
 
     @EventHandler
