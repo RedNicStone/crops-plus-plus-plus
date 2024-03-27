@@ -1,6 +1,7 @@
 package com.github.bartimaeusnek.cropspp;
 
 import com.github.bartimaeusnek.croploadcore.ModsLoaded;
+import com.github.bartimaeusnek.cropspp.GTHandler.CropMachineCraftingRecipes;
 import com.github.bartimaeusnek.cropspp.commands.EnableDebug;
 import com.github.bartimaeusnek.cropspp.croploader.CropLoader;
 import com.github.bartimaeusnek.cropspp.items.CppItems;
@@ -49,7 +50,7 @@ public final class Cropspp {
         CppItems.register_Items();
         MinecraftForge.EVENT_BUS.register(CropLoader.EventSubscriber.class);
         if (ModsLoaded.GT) {
-            CropMetaTileEntities.init();
+            CropMetaTileEntities.register();
         }
     }
 

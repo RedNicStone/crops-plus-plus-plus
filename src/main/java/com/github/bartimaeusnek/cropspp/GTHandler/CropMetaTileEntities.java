@@ -21,7 +21,7 @@ public class CropMetaTileEntities {
     public static final SimpleMachineMetaTileEntity[] SYNTHESIZER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
     public static final SimpleMachineMetaTileEntity[] WEED_PICKER = new SimpleMachineMetaTileEntity[GTValues.V.length - 1];
 
-    public static void init() {
+    public static void register() {
         GTLog.logger.info("Registering MetaTileEntities");
 
         int itemIDStart = 11000;
