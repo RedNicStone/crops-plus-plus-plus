@@ -1,4 +1,5 @@
 < de_DE.lang - Deutsche Sprachdatei für Crops++ >
+
 item.Spade.name=Sparten
 item.WateringCan.name=[WiP] Gießkanne
 itemGroup.Cropspp=Crops++
@@ -6,11 +7,12 @@ item.berry.cactus.name=Kaktusfrucht
 item.berry.huckle.name=Amerikanische Blaubeere
 item.berry.sugarbeet.name=Zuckerrübe
 item.foodGoldfish.name=Goldfisch
-item.cpplens.name=Pflanzenlinse Lens
+item.cppLens.name=Pflanzenlinse Lens
 item_Modifier_Space.name=Kosmos Blüten
 item_Modifier_Magic.name=Magie Essenz
 item_Modifier_Anti.name=Anti-Materie Wurzeln
 item_Modifier_Trophy.name=Zertifikat des nicht mehr Noobs-Seins
+
 fluid.potion.DKorn=Doppelkorn
 fluid.potion.Korn=Korn
 fluid.potion.FWheat=Fermentierter Weizen
@@ -21,6 +23,7 @@ fluid.potion.Wash=Fermentiere Maische
 fluid.potion.GHP=Gewöhnlicher Hochprozentiger
 fluid.potion.jagi=Echter Jägermeister!
 fluid.potion.njagi=Mümmelmann
+
 potion.DKorn.bottled.name=Doppelkorn in Flaschen
 potion.Korn.bottled.name=Korn in Flaschen
 potion.FWheat.bottled.name=Fermentierter Weizen in Flaschen
