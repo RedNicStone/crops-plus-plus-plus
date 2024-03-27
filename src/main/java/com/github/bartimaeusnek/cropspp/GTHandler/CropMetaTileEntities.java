@@ -1,4 +1,4 @@
-package com.github.bartimaeusnek.cropspp.GTHandler.machines;
+package com.github.bartimaeusnek.cropspp.GTHandler;
 
 import gregtech.api.GTValues;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
@@ -64,6 +64,7 @@ public class CropMetaTileEntities {
                                             RecipeMap<?> map,
                                             ICubeRenderer texture) {
         MetaTileEntities.registerSimpleMetaTileEntity(
-                machines, startId, name, map, texture, true, GTUtility::gregtechId, GTUtility.defaultTankSizeFunction);
+                machines, startId, name, map, texture,
+                true, GTCompat::cropsId, GTUtility.hvCappedTankSizeFunction);
     }
 }
