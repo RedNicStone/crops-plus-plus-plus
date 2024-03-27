@@ -1,4 +1,4 @@
-package com.github.bartimaeusnek.cropspp.GTHandler.machines;
+package com.github.bartimaeusnek.cropspp.GTHandler;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
@@ -12,31 +12,28 @@ public class CropRecipeMaps {
             new RecipeMapScanner("scanner", 2, 1, 0, 0,
                     new SimpleRecipeBuilder(), false)
                     .setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
-                    .setSlotOverlay(false, false, true, GuiTextures.SCANNER_OVERLAY)
+                    .setSlotOverlay(false, false, true, CropGuiTextures.SEED_BAG_OVERLAY)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.ELECTROLYZER);
 
     public static final RecipeMap<SimpleRecipeBuilder> REPLICATOR_RECIPES =
-            new RecipeMapScanner("scanner", 1, 1, 1, 0,
+            new RecipeMapScanner("replicator", 1, 1, 1, 0,
                     new SimpleRecipeBuilder(), false)
                     .setSlotOverlay(false, false, GuiTextures.CANISTER_OVERLAY)
-                    .setSlotOverlay(false, false, true, GuiTextures.SCANNER_OVERLAY)
+                    .setSlotOverlay(false, false, true, CropGuiTextures.SEED_BAG_OVERLAY)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.ELECTROLYZER);
 
     public static final RecipeMap<SimpleRecipeBuilder> SYNTHESIZER_RECIPES =
-            new RecipeMapScanner("scanner", 4, 1, 0, 0,
+            new RecipeMapScanner("synthesizer", 4, 1, 0, 0,
                     new SimpleRecipeBuilder(), false)
                     .setSlotOverlay(false, false, GuiTextures.DATA_ORB_OVERLAY)
-                    .setSlotOverlay(false, false, true, GuiTextures.DATA_ORB_OVERLAY)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.ELECTROLYZER);
 
     public static final RecipeMap<SimpleRecipeBuilder> WEED_PICKER_RECIPES =
-            new RecipeMapScanner("scanner", 2, 1, 0, 0,
+            new RecipeMapScanner("weed_picker", 4, 0, 0, 0,
                     new SimpleRecipeBuilder(), false)
-                    .setSlotOverlay(false, false, GuiTextures.DATA_ORB_OVERLAY)
                     .setSlotOverlay(false, false, true, GuiTextures.SCANNER_OVERLAY)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.ELECTROLYZER);
 }
