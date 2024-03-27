@@ -28,7 +28,7 @@ public class CropMetaTileEntities {
         registerCropMachine(
                 GENE_EXTRACTOR,
                 itemIDStart += GENE_EXTRACTOR.length,
-                "gene_extractor",
+                CropMachineNames.GENE_EXTRACTOR,
                 CropRecipeMaps.GENE_EXTRACTOR_RECIPES,
                 Textures.SCANNER_OVERLAY
         );
@@ -36,7 +36,7 @@ public class CropMetaTileEntities {
         registerCropMachine(
                 REPLICATOR,
                 itemIDStart += REPLICATOR.length,
-                "replicator",
+                CropMachineNames.REPLICATOR,
                 CropRecipeMaps.REPLICATOR_RECIPES,
                 Textures.SCANNER_OVERLAY
         );
@@ -44,7 +44,7 @@ public class CropMetaTileEntities {
         registerCropMachine(
                 SYNTHESIZER,
                 itemIDStart += SYNTHESIZER.length,
-                "synthesizer",
+                CropMachineNames.SYNTHESIZER,
                 CropRecipeMaps.SYNTHESIZER_RECIPES,
                 Textures.SCANNER_OVERLAY
         );
@@ -52,7 +52,7 @@ public class CropMetaTileEntities {
         registerCropMachine(
                 WEED_PICKER,
                 itemIDStart += WEED_PICKER.length,
-                "weed_picker",
+                CropMachineNames.WEED_PICKER,
                 CropRecipeMaps.WEED_PICKER_RECIPES,
                 Textures.SCANNER_OVERLAY
         );
