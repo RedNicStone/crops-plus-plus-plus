@@ -41,6 +41,30 @@ public class CropMetaTileEntities {
                 CropRecipeMaps.GENE_EXTRACTOR_RECIPES,
                 Textures.SCANNER_OVERLAY,
                 true);
+
+        registerSimpleMetaTileEntity(
+                REPLICATOR,
+                itemIDStart += REPLICATOR.length,
+                "replicator",
+                CropRecipeMaps.REPLICATOR_RECIPES,
+                Textures.SCANNER_OVERLAY,
+                true);
+
+        registerSimpleMetaTileEntity(
+                SYNTHESIZER,
+                itemIDStart += SYNTHESIZER.length,
+                "synthesizer",
+                CropRecipeMaps.SYNTHESIZER_RECIPES,
+                Textures.SCANNER_OVERLAY,
+                true);
+
+        registerSimpleMetaTileEntity(
+                WEED_PICKER,
+                itemIDStart += WEED_PICKER.length,
+                "weed_picker",
+                CropRecipeMaps.WEED_PICKER_RECIPES,
+                Textures.SCANNER_OVERLAY,
+                true);
     }
 
     private static void registerSimpleMetaTileEntity(SimpleMachineMetaTileEntity[] machines,
