@@ -21,14 +21,14 @@ public class CropRecipeMaps {
                     new SimpleRecipeBuilder(), false)
                     .setSlotOverlay(false, false, GuiTextures.CANISTER_OVERLAY)
                     .setSlotOverlay(false, false, true, CropGuiTextures.SEED_BAG_OVERLAY)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR, ProgressWidget.MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.ELECTROLYZER);
 
     public static final RecipeMap<SimpleRecipeBuilder> SYNTHESIZER_RECIPES =
             new RecipeMapScanner("synthesizer", 4, 1, 0, 0,
                     new SimpleRecipeBuilder(), false)
                     .setSlotOverlay(false, false, GuiTextures.DATA_ORB_OVERLAY)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, ProgressWidget.MoveType.HORIZONTAL)
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR, ProgressWidget.MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.ELECTROLYZER);
 
     public static final RecipeMap<SimpleRecipeBuilder> WEED_PICKER_RECIPES =
